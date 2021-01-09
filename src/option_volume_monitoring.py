@@ -75,7 +75,7 @@ if __name__ == '__main__':
     if not os.path.exists(outdir):
         os.makedirs(outdir)
 
-    filename = '{}/unusual_{}_{}_{}_{}.csv'.format(outdir,'call','test',date_f,time_f)
+    filename = '{}/unusual_{}_{}_{}.csv'.format(outdir,'call',date_f,time_f)
     with open(filename,'w') as f:
         f.write('Symbol,Exp Date,Strike,Last Traded,Money,Volume,Open,Ratio,Put Vol.,Put Open,Put Ratio,Current Price,Prev Close Price,Imp Volatility,Long,Short\n')
 
