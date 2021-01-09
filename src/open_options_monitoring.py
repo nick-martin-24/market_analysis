@@ -10,18 +10,15 @@ import mail
 import time
 import datetime
 import os
-
+import market_utils as mutils
 start_time = time.time()
 
-user = os.environ['robin_user']
-pwd = os.environ['robin_pass']
+mutils.login()
 stop_loss_file = '/Users/nickmartin/personal/finance/stop_loss.txt'
 gains_file = '/Users/nickmartin/personal/finance/gains.txt'
 
 stop_loss = -50
 gains = 50
-
-r.login(user,pwd)
 
 # ============================================================
 # Load in list of previously flagged stop loss events

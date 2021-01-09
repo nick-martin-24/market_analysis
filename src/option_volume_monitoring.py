@@ -18,9 +18,7 @@ from tqdm import tqdm
 from joblib import Parallel, delayed
 
 def find_options(s,filename,columns):
-    user = os.environ['robin_user']
-    pwd = os.environ['robin_pass']
-    r.login(user,pwd)
+    market_utils.login()
     options = {}
 
     all_options = r.options.find_tradable_options(s, optionType='call')
@@ -51,10 +49,7 @@ def find_options(s,filename,columns):
 if __name__ == '__main__':
     start_time = time.time()
 
-
-    user = os.environ['robin_user']
-    pwd = os.environ['robin_pass']
-    r.login(user,pwd)
+    market_utils.login()
     api_market_header = 'https://api.robinhood.com/markets/'
     markets = ['{}XNYS/'.format(api_market_header),
            '{}XNAS/'.format(api_market_header),

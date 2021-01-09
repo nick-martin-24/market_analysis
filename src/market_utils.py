@@ -5,6 +5,12 @@ import yagmail
 import os
 import matplotlib.pyplot as plt
 
+
+def login():
+    user = os.environ['robin_user']
+    pwd = os.environ['robin_pass']
+    r.login(user,pwd)
+
 def get_options(all_options,max_date,latest_price):
     options = []
     for option in all_options:
